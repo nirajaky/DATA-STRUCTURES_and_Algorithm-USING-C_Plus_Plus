@@ -22,7 +22,6 @@ int main()
         for(int j =i+1; j<=len-1; j++) {
             if(newStr[i] == newStr[j]){
                 flag = 1;
-                continue;
             }
         }
         if (flag ==0)
