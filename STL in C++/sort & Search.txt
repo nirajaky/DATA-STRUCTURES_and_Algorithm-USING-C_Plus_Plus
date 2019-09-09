@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+
+using namespace std;
+
+bool cmp(int X, int Y){
+        return X > Y;
+    }
+
+int main()
+{
+    int a[] = {88,4,6,23,20,55,76,14};
+
+
+    sort(a, a + 8,cmp );
+    for(int i =0; i<sizeof(a)/sizeof(int); i++) {
+        cout << a[i] << endl;
+    }
+    cout << binary_search(a, a+8, 5); // returns 1 OR 0
+    return 0;
+}
