@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+void insertionSort(int arr[], int siz){
+    int key = 0;
+    int j = 0;
+    for(int i=1; i<siz; i++){
+        key = arr[i];
+        j = i-1;
+        while(j>=0 && arr[j]>key){
+            arr[j+1] = arr[j];
+            j = j-1;
+        }
+        arr[j+1] = key;
+    }
+
+}
+int main()
+{
+    int arr[] = {22, 33,10, 4, 78, 9, 100, 2};
+    int siz = sizeof(arr)/sizeof(int);
+
+
+    cout << "Sorted Array is : " << endl;
+    insertionSort(arr, siz);
+    for(int i=0; i<sizeof(arr)/sizeof(int); i++){
+        cout << arr[i] << " ";
+    }
+
+    return 0;
+}
