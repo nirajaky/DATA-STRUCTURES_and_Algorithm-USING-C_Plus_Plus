@@ -1,0 +1,32 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int num;
+    int arr[100] = {}, x, maximum = 0;
+    cout << "Enter the no. of array " << endl;
+    cin >> num;
+    cout << "Enter the numbers " << endl;
+    for(int i = 0; i < num; i++)
+    {
+        cin >> x;
+        arr[x]++;
+        maximum = max(maximum, x);
+    }
+    if(arr[7] > 0)
+        cout << "7 appeared " << arr[7] << " Times" << endl;
+
+    for(int i =0; i <= maximum; i++)
+    {
+        if(arr[i] > 0)
+        {
+            for(int j = 1; j <= arr[i]; j++)
+            {
+                cout << i << endl;
+            }
+        }
+    }
+    return 0;
+}
